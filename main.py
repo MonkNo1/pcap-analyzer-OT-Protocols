@@ -14,7 +14,7 @@ header = ["soruce","Destination","protocal","data","timestamp"]
 
 def outcsv(pktcsv):
     print('writting in  {}...'.format(csvfil))
-    with open(csvfil, 'w') as csvfile: 
+    with open(csvfil, 'w',newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(header)
         csvwriter.writerows(pktcsv) 
