@@ -62,7 +62,7 @@ def readpickle():
     print("Load  time : ",(ends-strt))
     print("Pickle Load COmplete...!")
     print("Some Sample Packets...!")
-    for m in range(0,10):
+    for m in range(0,5):
         print(pkts[m].summary())
     print("....")
     analyze_packet()
