@@ -1,6 +1,7 @@
 from scapy.all import rdpcap
 from scapy.all import *
 import pickle
+import argparse
 import time
 import csv
 
@@ -66,5 +67,27 @@ def readpickle():
     print("....")
     analyze_packet()
     
-        
-readpickle()
+       
+if __name__=="__main__":    
+    parser = argparse.ArgumentParser(description ='Enter  The File name to Process')
+    parser.add_argument('pkl_file',
+                    metavar ='-pkl',
+                    type = str,
+                    nargs ='+',
+                    help ='This for directly loading a Pickle file',
+                    action="store_true")
+    _StoreTrueAction(readpickle())
+  
+    parser.add_argument('Pcap_file',
+                    metavar ='-pcap',
+                    type = str,
+                    nargs ='+',
+                    help ='This for will load a Pcap file and convert it to pickle File and porcess it ...!',
+                    action="store_true")
+    _StoreTrueAction(readpcap())
+    # args = parser.parse_args()
+    # file_ext = args.split(".")
+    # print(file_ext)
+
+  
+    # readpickle()
