@@ -70,8 +70,16 @@ def readpickle():
        
 if __name__=="__main__":    
     parser = argparse.ArgumentParser(description ='Enter  The File name to Process')
-    parser.add_argument('-pkl','--pkle',help="get input as Direct Pickle FILE")
-    parser.add_argument('-cap','--pcap',help ='This for will load a Pcap file and convert it to pickle File and porcess it ...!',)
+    parser.add_argument('-pkl','--pkl',help="get input as Direct Pickle FILE")
+    parser.add_argument('-cap','--cap',help ='This for will load a Pcap file and convert it to pickle File and porcess it ...!',)
     args = parser.parse_args()    
-    if args.Output:
-        print("Displaying Output as: % s" % args.Output)
+    if args.cap != None:
+        pcapfile = str(args.cap)
+        print(pcapfile)
+        readpcap()
+    if args.pkl != None:
+        pickle_file_out = str(args.pkl)
+        print(pickle_file_out)
+        readpickle()
+    # print("Displaying Output as: % s" % args.pkl)
+    # print("Displaying Output as: % s" % args.cap)
