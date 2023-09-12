@@ -1,0 +1,1 @@
+The PCAP to CSV Converter is a Python script that simplifies the analysis of PCAP files, commonly used to capture network traffic data. It uses Scapy to identify packets with Human Machine Interface (HMI) data, then saves this data in a CSV file for analysis, especially in industrial and automation contexts.
